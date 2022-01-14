@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GameTest {
 
     @Test
-    @DisplayName("score should return current score")
+    @DisplayName("Checking score should return current score")
     void scoreShouldReturnScore(){
         Game game = new Game();
 
