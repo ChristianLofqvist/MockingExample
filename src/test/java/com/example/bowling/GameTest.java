@@ -26,8 +26,6 @@ public class GameTest {
         var result = game.score();
 
         assertThat(result).isEqualTo(5);
-
-
     }
 
     @Test
