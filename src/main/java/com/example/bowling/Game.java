@@ -17,6 +17,7 @@ public class Game {
 
         if(strike){
             score += pins;
+            strike = false;
         }
 
         if(rolls == 1 && score == 10){
@@ -26,5 +27,6 @@ public class Game {
 
         score += pins;
         rolls++;
+
     }
 }

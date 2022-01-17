@@ -65,5 +65,19 @@ public class GameTest {
 
         assertThat(result).isEqualTo(26);
     }
+
+    @Test
+    @DisplayName("Checking score should return correct score rolling several times after strike")
+    void scoreAfterSeveralRolls() {
+        Game game = new Game();
+
+        game.roll(10);
+        game.roll(7);
+        game.roll(1);
+        game.roll(1);
+        var result = game.score();
+
+        assertThat(result).isEqualTo(27);
+    }
 }
 
