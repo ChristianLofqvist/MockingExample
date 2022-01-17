@@ -9,7 +9,7 @@ public class GameTest {
 
     @Test
     @DisplayName("Checking score should return current score")
-    void scoreShouldReturnScore(){
+    void scoreShouldReturnScore() {
         Game game = new Game();
 
         var result = game.score();
@@ -19,7 +19,7 @@ public class GameTest {
 
     @Test
     @DisplayName("Checking score should return number of pins knocked down")
-    void scoreAfterOneRoll(){
+    void scoreAfterOneRoll() {
         Game game = new Game();
 
         game.roll(5);
@@ -30,7 +30,7 @@ public class GameTest {
 
     @Test
     @DisplayName("Checking score should return correct score after two rolls")
-    void scoreAfterTwoRolls(){
+    void scoreAfterTwoRolls() {
         Game game = new Game();
 
         game.roll(5);
