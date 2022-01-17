@@ -4,6 +4,7 @@ public class Game {
 
     int score = 0;
     private int rolls = 0;
+    boolean strike = false;
 
     public int score(){
         return score;
@@ -13,6 +14,16 @@ public class Game {
         if(rolls == 2 && score == 10){
                 score += pins;
         }
+
+        if(strike){
+            score += pins;
+        }
+
+        if(rolls == 1 && score == 10){
+            score += pins;
+            strike = true;
+        }
+
         score += pins;
         rolls++;
     }
