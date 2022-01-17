@@ -111,7 +111,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score rolling spare after several strikes ")
+    @DisplayName("Checking score should return correct score rolling spare after several strikes")
     void scoreAfterSeveralStrikesAndThenSpare() {
         Game game = new Game();
 
@@ -140,6 +140,7 @@ public class GameTest {
         game.roll(0);
         var result = game.score();
 
-        assertThat(result).isEqualTo(79);    }
+        assertThat(result).isEqualTo(79);
+    }
 }
 
