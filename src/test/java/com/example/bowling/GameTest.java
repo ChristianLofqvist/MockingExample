@@ -79,5 +79,21 @@ public class GameTest {
 
         assertThat(result).isEqualTo(27);
     }
+
+    @Test
+    @DisplayName("Checking score should return correct score rolling several spares")
+    void scoreAfterSeveralRollsSpare() {
+        Game game = new Game();
+
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(7);
+        game.roll(2);
+        var result = game.score();
+
+        assertThat(result).isEqualTo(41);
+    }
 }
 
