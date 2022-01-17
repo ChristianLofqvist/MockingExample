@@ -18,8 +18,8 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking roll should return number of pins knocked down")
-    void rollShouldReturnNumberOfPins(){
+    @DisplayName("Checking score should return number of pins knocked down")
+    void scoreAfterOneRoll(){
         Game game = new Game();
 
         game.roll(5);
