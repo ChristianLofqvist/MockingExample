@@ -16,4 +16,17 @@ public class GameTest {
 
         assertThat(result).isEqualTo(0);
     }
+
+    @Test
+    @DisplayName("Checking roll should return number of pins knocked down")
+    void rollShouldReturnNumberOfPins(){
+        Game game = new Game();
+
+        game.roll(5);
+        var result = game.score();
+
+        assertThat(result).isEqualTo(5);
+
+
+    }
 }
