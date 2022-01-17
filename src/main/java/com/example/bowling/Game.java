@@ -2,11 +2,11 @@ package com.example.bowling;
 
 public class Game {
 
-    int score = 0;
+    private int score = 0;
     private int rolls = 0;
     boolean strike = false;
-    int frameScore = 0;
-    int frameCount = 0;
+    private int frameScore = 0;
+    private int frameCount = 0;
 
     public int score() {
         return score;
