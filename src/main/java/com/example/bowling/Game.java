@@ -26,6 +26,8 @@ public class Game {
         if(rolls == 1 && frameScore == 10){
             score += pins;
             strike = true;
+            frameScore = 0;
+            rolls = 0;
         }
 
         frameScore += pins;
