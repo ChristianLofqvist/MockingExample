@@ -144,7 +144,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score after ten frames played")
+    @DisplayName("Checking score should return correct score after ten frames played")
     void scoreAfterTenFrames() {
         Game game = new Game();
 
