@@ -142,5 +142,33 @@ public class GameTest {
 
         assertThat(result).isEqualTo(79);
     }
+
+    @Test
+    @DisplayName("Checking score after ten frames played")
+    void scoreAfterTenFrames() {
+        Game game = new Game();
+
+        game.roll(10);
+        game.roll(10);
+        game.roll(5);
+        game.roll(5);
+        game.roll(10);
+        game.roll(2);
+        game.roll(0);
+        game.roll(9);
+        game.roll(0);
+        game.roll(7);
+        game.roll(3);
+        game.roll(4);
+        game.roll(2);
+        game.roll(7);
+        game.roll(1);
+        game.roll(0);
+        game.roll(10);
+        game.roll(2);
+        var result = game.score();
+
+        assertThat(result).isEqualTo(128);
+    }
 }
 
