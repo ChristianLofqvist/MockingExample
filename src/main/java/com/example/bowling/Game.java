@@ -33,6 +33,5 @@ public class Game {
         frameScore += pins;
         score += pins;
         rolls++;
-
     }
 }
