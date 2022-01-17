@@ -98,7 +98,7 @@ public class GameTest {
 
     @Test
     @DisplayName("Checking score should return correct score rolling several strikes")
-    void scoreAfterSeveralRollsStrike() {
+    void scoreAfterSeveralStrikes() {
         Game game = new Game();
 
         game.roll(10);
