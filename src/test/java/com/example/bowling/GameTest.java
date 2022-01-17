@@ -29,4 +29,17 @@ public class GameTest {
 
 
     }
+
+    @Test
+    @DisplayName("Checking score should return correct score after two rolls")
+    void scoreAfterTwoRolls(){
+        Game game = new Game();
+
+        game.roll(5);
+        game.roll(4);
+        var result = game.score();
+
+        assertThat(result).isEqualTo(9);
+    }
 }
+
