@@ -109,5 +109,21 @@ public class GameTest {
 
         assertThat(result).isEqualTo(49);
     }
+
+    @Test
+    @DisplayName("Checking score should return correct score rolling spare after several strikes ")
+    void scoreAfterSeveralStrikesAndThenSpare() {
+        Game game = new Game();
+
+        game.roll(10);
+        game.roll(10);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(2);
+        var result = game.score();
+
+        assertThat(result).isEqualTo(67);
+    }
 }
 
