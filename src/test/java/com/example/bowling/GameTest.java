@@ -191,5 +191,35 @@ public class GameTest {
 
         assertThat(result).isEqualTo(245);
     }
+
+    @Test
+    @DisplayName("Checking score should return correct score after nine frames with spare")
+    void scoreAfterNineFramesWithSpare() {
+        Game game = new Game();
+
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(5);
+        game.roll(1);
+        game.roll(1);
+        var result = game.score();
+
+        assertThat(result).isEqualTo(133);
+    }
 }
 
