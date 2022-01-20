@@ -170,5 +170,26 @@ public class GameTest {
 
         assertThat(result).isEqualTo(128);
     }
+
+    @Test
+    @DisplayName("Checking score should return correct score after nine frames with strike")
+    void scoreAfterNineFramesWithStrike() {
+        Game game = new Game();
+
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(1);
+        game.roll(1);
+        var result = game.score();
+
+        assertThat(result).isEqualTo(245);
+    }
 }
 
