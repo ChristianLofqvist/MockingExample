@@ -16,4 +16,14 @@ public class EmployeeTest {
 
         assertThat(result).isEqualTo("test");
     }
+
+    @Test
+    @DisplayName("getSalary should return salary")
+    void getSalaryShouldReturnSalary() {
+        Employee employee = new Employee("test", 200);
+
+        var result = employee.getSalary();
+
+        assertThat(result).isEqualTo(200);
+    }
 }
