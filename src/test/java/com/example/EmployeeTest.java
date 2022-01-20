@@ -69,4 +69,14 @@ public class EmployeeTest {
 
         assertThat(result).isTrue();
     }
+
+    @Test
+    @DisplayName("toString should return ID and salary")
+    void toStringShouldReturnIdAndSalary() {
+        Employee employee = new Employee("test", 200);
+
+        var result = employee.toString();
+
+        assertThat(result).isEqualTo("Employee [id=test, salary=200.0]");
+    }
 }
