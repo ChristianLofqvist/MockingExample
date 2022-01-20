@@ -26,4 +26,15 @@ public class EmployeeTest {
 
         assertThat(result).isEqualTo(200);
     }
+
+    @Test
+    @DisplayName("setId should set ID")
+    void setIdShouldSetId() {
+        Employee employee = new Employee("test", 200);
+
+        employee.setId("test2");
+        var result = employee.getId();
+
+        assertThat(result).isEqualTo("test2");
+    }
 }
