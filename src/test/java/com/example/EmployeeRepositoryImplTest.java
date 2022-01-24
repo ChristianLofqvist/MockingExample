@@ -29,4 +29,15 @@ class EmployeeRepositoryImplTest {
 
         assertThat(result).contains(employee);
     }
+
+    @Test
+    @DisplayName("constructor should add employees to list")
+    void constructorShouldAddEmployeesToList() {
+        Employee employee = new Employee("Test", 2.0f);
+        EmployeeRepository employeeRepository = new EmployeeRepositoryImpl(List.of(employee));
+
+        var result = employeeRepository.findAll();
+
+        assertThat(result).contains(employee);
+    }
 }

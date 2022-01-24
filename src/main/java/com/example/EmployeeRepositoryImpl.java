@@ -5,7 +5,15 @@ import java.util.List;
 
 public class EmployeeRepositoryImpl implements EmployeeRepository {
 
-    private List<Employee> employeeList = new ArrayList<>();
+    private final List<Employee> employeeList;
+
+    public EmployeeRepositoryImpl() {
+        this.employeeList = new ArrayList<>();
+    }
+
+    public EmployeeRepositoryImpl(List<Employee> employeeList) {
+        this.employeeList = new ArrayList<>(employeeList);
+    }
 
     @Override
     public List<Employee> findAll() {
