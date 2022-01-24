@@ -17,4 +17,16 @@ class EmployeeRepositoryImplTest {
 
         assertThat(result).isInstanceOf(List.class);
     }
+
+    @Test
+    @DisplayName("save should add to list")
+    void saveShouldAddToList() {
+        EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
+        Employee employee = new Employee("Test", 2.0f);
+
+        employeeRepository.save(employee);
+        var result = employeeRepository.findAll();
+
+        assertThat(result).contains(employee);
+    }
 }
