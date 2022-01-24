@@ -40,4 +40,18 @@ class EmployeeRepositoryImplTest {
 
         assertThat(result).contains(employee);
     }
+
+    @Test
+    @DisplayName("save should replace existing employee with new one if same ID")
+    void saveShouldReplaceEmployee() {
+        Employee employee = new Employee("Test", 2.0f);
+        Employee employee1 = new Employee("Test", 3.0f);
+        EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
+
+        employeeRepository.save(employee);
+        employeeRepository.save(employee1);
+        var result = employeeRepository.findAll();
+
+        assertThat(result).containsOnly(employee1);
+    }
 }
