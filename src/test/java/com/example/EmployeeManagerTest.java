@@ -26,9 +26,9 @@ class EmployeeManagerTest {
         EmployeeRepository employeeRepository = mock(EmployeeRepository.class);
         BankService bankService = mock(BankService.class);
         EmployeeManager employeeManager = new EmployeeManager(employeeRepository, bankService);
-        doThrow(new RuntimeException()).when(bankService).pay("Test", 2.0f);
-        when(employeeRepository.findAll()).thenReturn(List.of(new Employee("Test", 2.0f),
-                new Employee("Test2", 3.0f), new Employee("Test3", 4.0f)));
+        doThrow(new RuntimeException()).when(bankService).pay("Test", 2.0);
+        when(employeeRepository.findAll()).thenReturn(List.of(new Employee("Test", 2.0),
+                new Employee("Test2", 3.0), new Employee("Test3", 4.0)));
 
         var result = employeeManager.payEmployees();
         var result1 = employeeRepository.findAll();

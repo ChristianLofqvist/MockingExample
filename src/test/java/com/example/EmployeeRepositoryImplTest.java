@@ -22,7 +22,7 @@ class EmployeeRepositoryImplTest {
     @DisplayName("save should add to list")
     void saveShouldAddToList() {
         EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
-        Employee employee = new Employee("Test", 2.0f);
+        Employee employee = new Employee("Test", 2.0);
 
         employeeRepository.save(employee);
         var result = employeeRepository.findAll();
@@ -33,7 +33,7 @@ class EmployeeRepositoryImplTest {
     @Test
     @DisplayName("constructor should add employees to list")
     void constructorShouldAddEmployeesToList() {
-        Employee employee = new Employee("Test", 2.0f);
+        Employee employee = new Employee("Test", 2.0);
         EmployeeRepository employeeRepository = new EmployeeRepositoryImpl(List.of(employee));
 
         var result = employeeRepository.findAll();
@@ -44,8 +44,8 @@ class EmployeeRepositoryImplTest {
     @Test
     @DisplayName("save should replace existing employee with new one if same ID")
     void saveShouldReplaceEmployee() {
-        Employee employee = new Employee("Test", 2.0f);
-        Employee employee1 = new Employee("Test", 3.0f);
+        Employee employee = new Employee("Test", 2.0);
+        Employee employee1 = new Employee("Test", 3.0);
         EmployeeRepository employeeRepository = new EmployeeRepositoryImpl();
 
         employeeRepository.save(employee);
