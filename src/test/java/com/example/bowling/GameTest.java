@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GameTest {
 
     @Test
-    @DisplayName("Checking score should return current score")
+    @DisplayName("Score should return current score")
     void scoreShouldReturnScore() {
         Game game = new Game();
 
@@ -18,7 +18,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return number of pins knocked down")
+    @DisplayName("Score should return number of pins knocked down")
     void scoreAfterOneRoll() {
         Game game = new Game();
 
@@ -29,7 +29,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score after two rolls")
+    @DisplayName("Score should return correct score after two rolls")
     void scoreAfterTwoRolls() {
         Game game = new Game();
 
@@ -41,7 +41,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score after spare")
+    @DisplayName("Score should return correct score after spare")
     void scoreAfterSpare() {
         Game game = new Game();
 
@@ -54,7 +54,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score after strike")
+    @DisplayName("Score should return correct score after strike")
     void scoreAfterStrike() {
         Game game = new Game();
 
@@ -67,7 +67,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score rolling several times after strike")
+    @DisplayName("Score should return correct score rolling several times after strike")
     void scoreAfterSeveralRolls() {
         Game game = new Game();
 
@@ -81,7 +81,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score rolling several spares")
+    @DisplayName("Score should return correct score rolling several spares")
     void scoreAfterSeveralSpares() {
         Game game = new Game();
 
@@ -97,7 +97,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score rolling several strikes")
+    @DisplayName("Score should return correct score rolling several strikes")
     void scoreAfterSeveralStrikes() {
         Game game = new Game();
 
@@ -111,7 +111,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score rolling spare after several strikes")
+    @DisplayName("Score should return correct score rolling spare after several strikes")
     void scoreAfterSeveralStrikesAndThenSpare() {
         Game game = new Game();
 
@@ -127,7 +127,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score rolling strike after several strikes and spare")
+    @DisplayName("Score should return correct score rolling strike after several strikes and spare")
     void scoreAfterSeveralStrikesAndSpareAndThenStrike() {
         Game game = new Game();
 
@@ -144,7 +144,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score after ten frames played")
+    @DisplayName("Score should return correct score after ten frames played")
     void scoreAfterTenFrames() {
         Game game = new Game();
 
@@ -172,7 +172,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score after nine frames with strike")
+    @DisplayName("Score should return correct score after nine frames with strike")
     void scoreAfterNineFramesWithStrike() {
         Game game = new Game();
 
@@ -193,7 +193,7 @@ public class GameTest {
     }
 
     @Test
-    @DisplayName("Checking score should return correct score after nine frames with spare")
+    @DisplayName("Score should return correct score after nine frames with spare")
     void scoreAfterNineFramesWithSpare() {
         Game game = new Game();
 
